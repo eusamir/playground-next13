@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       maxWidth: {
         '1/2': '1180',
+        'custom': 'calc(100vw - ((100vw - 1180px) / 2))',
       },
       margin: {
         'auto-x': '0 auto',
