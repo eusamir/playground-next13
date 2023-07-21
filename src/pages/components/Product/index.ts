@@ -1,10 +1,7 @@
 import { stripe } from '@/lib/stripe';
-import { Product } from '@/styles/pages/home';
-import Image from 'next/image';
 import Stripe from 'stripe';
 import 'keen-slider/keen-slider.min.css';
 
-// Define the interface for ProductProps
 export interface ProductProps {
   id: string;
   name: string;
@@ -28,7 +25,6 @@ export async function ProductContent() {
       }).format(price.unit_amount as number / 100),
     };
   });
-  console.log(products)
 
-  return {products};
+  return {products}
 }
