@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import './global.css'
 import { Inter } from 'next/font/google'
 import logoImg from '../assets/logoImg.svg'
 import Image from 'next/image'

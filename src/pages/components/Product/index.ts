@@ -3,13 +3,13 @@ import Stripe from 'stripe';
 import 'keen-slider/keen-slider.min.css';
 
 export interface ProductProps {
-  id: string;
-  name: string;
-  imageUrl: string;
-  price: string;
+    id: string;
+    name: string;
+    imageUrl: string;
+    price: string;
 }
 
-export async function ProductContent() {
+export default async function ProductContent() {
   const response = await stripe.products.list({
     expand: ['data.default_price'],
   });
