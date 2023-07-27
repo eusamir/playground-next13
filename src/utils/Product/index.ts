@@ -9,7 +9,7 @@ export interface ProductProps {
     price: string;
 }
 
-export default async function ProductContent() {
+export async function ProductContent() {
   const response = await stripe.products.list({
     expand: ['data.default_price'],
   });
@@ -26,5 +26,8 @@ export default async function ProductContent() {
     };
   });
 
-  return {products}
+  return {
+    products,
+    revalidate: 60
+  }
 }

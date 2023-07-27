@@ -1,5 +1,5 @@
 import Carrossel from '@/pages/components/Carrossel'
-import ProductContent  from '@/pages/components/Product'
+import {ProductContent}  from '@/utils/Product'
 
 export default async function Home() {
   const products = (await ProductContent()).products;

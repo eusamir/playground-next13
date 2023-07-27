@@ -1,6 +1,6 @@
 import { ImageContainer, ProductContainer, ProductDetails } from "@/styles/pages/product"
 import Image from "next/image"
-import ProductById  from "@/pages/components/ProductById"
+import {ProductById}  from "@/utils/ProductById"
 
 interface ProductProps {
   params:{

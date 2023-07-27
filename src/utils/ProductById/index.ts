@@ -2,7 +2,7 @@ import { stripe } from '@/lib/stripe';
 import Stripe from 'stripe';
 import 'keen-slider/keen-slider.min.css';
 
-export default async  function ProductById(productId:string) {
+export async  function ProductById(productId:string) {
   const product = await stripe.products.retrieve(productId,{
     expand: ['default_price'],
   });
