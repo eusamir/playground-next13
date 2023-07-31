@@ -9,12 +9,13 @@ export async  function ProductById(productId:string) {
   const price =product.default_price as Stripe.Price;
     return {
       id: product.id,
-      name: product.name,
+      name: product.name,  
       imageUrl: product.images[0],
       price: new Intl.NumberFormat('pt-br', {
         style: 'currency',
         currency: 'BRL',
       }).format(price.unit_amount as number / 100),
       description: product.description,
-    };
+      defaultPriceId: price.id,
+    }
 }

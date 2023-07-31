@@ -1,6 +1,7 @@
 import { ImageContainer, ProductContainer, ProductDetails } from "@/styles/pages/product"
-import Image from "next/image"
 import {ProductById}  from "@/utils/ProductById"
+import Button from '../../../pages/components/Button/index'
+import Image from "next/image"
 
 interface ProductProps {
   params:{
@@ -20,8 +21,8 @@ export default async function Product({params}: ProductProps){
         <h1>{products.name}</h1>
         <span>{products.price}</span>
         <p>{products.description}</p>
-      
-        <button>Comprar agora</button>
+        <Button products={products}/>
+        
       </ProductDetails>
     </ProductContainer>
   )

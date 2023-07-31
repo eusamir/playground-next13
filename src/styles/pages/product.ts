@@ -57,7 +57,12 @@ export const ProductDetails = styled.div`
     font-size: 1rem;
     border: none;
 
-    &:hover {
+    &:disabled{
+      opacity: 0.6;
+      cursor:not-allowed;
+    }
+
+    &:not(:disabled):hover {
       background-color:#00B37E ;
     }
   }
